@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { createImage } from '../actions'
+import { createImage } from '../../actions'
 import CreateForm from './CreateForm'
 
 class CreateFormContainer extends React.Component {

@@ -46,3 +46,22 @@ export const getImages = () => (dispatch, getState) => {
       .catch(console.error)
   }
 }
+
+export const LOGIN_USER = "LOGIN_USER"
+
+function newLogin(jwt) {
+  return {
+    type: LOGIN_USER,
+    payload: jwt
+  }
+}
+
+
+export const login = (data) => dispatch => {
+  request
+    .post(`${baseUrl}/login`)
+    .send(data)
+    .then(response => response.body.jwt)
+    .then(dispatch)
+    .catch(console.error)
+}

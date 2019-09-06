@@ -13,7 +13,7 @@ code {
 }
 
 .App {
-  background-color: #282c34;
+  background-color: hsl(220, 93%, 11%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,5 +24,18 @@ code {
 }
 
 .img {
-  max-height: 32vh;
+  max-width: 20vw;
+}
+
+.pics {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.dog {
+  width: 25vw;
+  padding: 1rem;
+  border: 1px solid white;
+  text-align: center;
 }

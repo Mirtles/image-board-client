@@ -1,9 +1,11 @@
-import { ALL_IMAGES } from '../actions/index'
+import { ALL_IMAGES, NEW_IMAGE } from '../actions/index'
 
 export default function (state = [], action = {}) {
   switch (action.type) {
     case ALL_IMAGES:
       return action.payload
+    case NEW_IMAGE:
+      return [action.payload, ...state]
     default:
       return state
   }
